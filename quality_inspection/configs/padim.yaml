@@ -1,0 +1,35 @@
+# PaDiM Industrial Baseline Configuration
+# Patch Distribution Modeling (Defard et al., ICPR 2021)
+
+model:
+  name: "padim"
+  backbone: "resnet18"                # Lightweight backbone for consumer GPU / CPU
+  pretrained: true
+  layers:
+    - "layer2"
+    - "layer3"
+  n_features: 100                     # Randomly selected embedding dimensions per patch
+  cov_regularizer: 0.001              # Diagonal jitter for invertible covariance
+  feature_selection_seed: 42
+
+dataset:
+  name: "autovi"
+  category: "bracket_assembly"
+  root_dir: "data/raw/autovi/bracket_assembly"
+  image_size: [256, 256]
+  train_batch_size: 8
+  eval_batch_size: 8
+  num_workers: 0
+  seed: 42
+  normalization: "imagenet"
+
+trainer:
+  device: "auto"
+  precision: "fp32"
+  seed: 42
+  output_dir: "models/padim"
+  checkpoint_name: "padim_checkpoint.pt"
+
+evaluation:
+  gaussian_blur_sigma: 4.0
+  threshold: null

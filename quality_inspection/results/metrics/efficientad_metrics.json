@@ -1,0 +1,32 @@
+{
+  "model": "efficientad",
+  "samples_evaluated": 30,
+  "nominal_samples": 10,
+  "anomalous_samples": 20,
+  "image_auroc": 0.79,
+  "pixel_auroc": 0.9787,
+  "optimal_threshold": 3.313,
+  "classification_metrics": {
+    "threshold": 3.313,
+    "f1_score": 0.8333,
+    "precision": 0.7143,
+    "recall": 1.0,
+    "specificity": 0.2,
+    "false_positive_rate": 0.8,
+    "false_negative_rate": 0.0,
+    "accuracy": 0.7333,
+    "true_positives": 20,
+    "false_positives": 8,
+    "true_negatives": 2,
+    "false_negatives": 0
+  },
+  "production_metrics": {
+    "mean_latency_ms": 53.39,
+    "p95_latency_ms": 71.83,
+    "fps": 18.7,
+    "ram_usage_mb": 454.04,
+    "vram_usage_mb": 0.0,
+    "avg_cpu_percent": 75.7,
+    "device": "cpu"
+  }
+}

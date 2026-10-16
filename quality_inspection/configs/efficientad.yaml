@@ -1,0 +1,34 @@
+# EfficientAD Industrial Model Configuration
+# Student-Teacher Distillation for Millisecond-Level Real-Time AOI (WACV 2024)
+
+model:
+  name: "efficientad"
+  teacher_backbone: "resnet18"         # Feature teacher backbone
+  feature_layer: "layer2"             # Intermediate representation layer
+  feature_dim: 128                    # Output channel dimension
+  patch_size: 3
+  image_size: [256, 256]
+
+dataset:
+  name: "autovi"
+  category: "bracket_assembly"
+  root_dir: "data/raw/autovi/bracket_assembly"
+  train_batch_size: 8
+  eval_batch_size: 8
+  num_workers: 0
+  seed: 42
+  normalization: "imagenet"
+
+training:
+  epochs: 8                           # Fast distillation convergence on nominal images
+  learning_rate: 0.001
+  weight_decay: 0.00001
+  device: "auto"                      # CUDA if available, fallback CPU
+  precision: "fp32"
+  seed: 42
+  output_dir: "models/efficientad"
+  checkpoint_name: "efficientad_checkpoint.pt"
+
+evaluation:
+  gaussian_blur_sigma: 4.0
+  threshold: null                     # Calibrated experimentally

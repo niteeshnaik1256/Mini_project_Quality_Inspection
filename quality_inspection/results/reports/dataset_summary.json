@@ -1,0 +1,36 @@
+{
+  "category_name": "bracket_assembly",
+  "root_path": "C:\\Users\\Niteesh S Naik\\OneDrive\\Desktop\\MiniProject\\quality_inspection\\data\\raw\\autovi\\bracket_assembly",
+  "train_normal_count": 30,
+  "test_normal_count": 10,
+  "test_anomaly_count": 20,
+  "total_samples": 60,
+  "defect_distribution": {
+    "bent_edge": 5,
+    "missing_clip": 5,
+    "surface_scratch": 5,
+    "weld_spatter": 5
+  },
+  "imbalance_ratio": 0.5,
+  "resolution_stats": {
+    "min_width": 256,
+    "max_width": 256,
+    "min_height": 256,
+    "max_height": 256,
+    "unique_resolutions": [
+      [
+        256,
+        256
+      ]
+    ],
+    "channel_counts": {
+      "3": 60
+    }
+  },
+  "mask_pairing_valid": true,
+  "unpaired_masks": [],
+  "train_test_leakage_detected": false,
+  "leakage_hashes": [],
+  "is_valid_anomalib_structure": true,
+  "validation_errors": []
+}

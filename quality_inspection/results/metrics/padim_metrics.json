@@ -1,0 +1,32 @@
+{
+  "model": "padim",
+  "samples_evaluated": 30,
+  "nominal_samples": 10,
+  "anomalous_samples": 20,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9957,
+  "optimal_threshold": 5674.3076,
+  "classification_metrics": {
+    "threshold": 5674.3076,
+    "f1_score": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "specificity": 1.0,
+    "false_positive_rate": 0.0,
+    "false_negative_rate": 0.0,
+    "accuracy": 1.0,
+    "true_positives": 20,
+    "false_positives": 0,
+    "true_negatives": 10,
+    "false_negatives": 0
+  },
+  "production_metrics": {
+    "mean_latency_ms": 80.54,
+    "p95_latency_ms": 93.51,
+    "fps": 12.4,
+    "ram_usage_mb": 480.65,
+    "vram_usage_mb": 0.0,
+    "avg_cpu_percent": 73.5,
+    "device": "cpu"
+  }
+}

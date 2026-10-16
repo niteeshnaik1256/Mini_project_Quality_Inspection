@@ -1,0 +1,21 @@
+# Step 10 — ROI pipeline configuration (manual baseline)
+# AutoVI bracket_assembly images are 256x256; full-frame ROI is valid for initial experiments.
+
+product_id_default: "bracket_assembly"
+
+roi:
+  mode: "manual"          # manual | yolo
+  manual:
+    coord_mode: "absolute"  # absolute | normalized
+    x: 0
+    y: 0
+    width: 256
+    height: 256
+  yolo:
+    weights: null           # e.g. models/roi/yolo_component.pt
+    class_filter: null
+    conf_threshold: 0.25
+
+inspection:
+  checkpoint: "models/patchcore/patchcore_checkpoint.pt"
+  gaussian_blur_sigma: 4.0

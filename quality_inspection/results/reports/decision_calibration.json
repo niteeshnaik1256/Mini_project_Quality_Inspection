@@ -1,0 +1,23 @@
+{
+  "thresholds": {
+    "pass_threshold": 1.0129452097415925,
+    "fail_threshold": 2.0871341228485107
+  },
+  "calibration_report": {
+    "method": "adaptive",
+    "pass_threshold": 1.0129452097415925,
+    "fail_threshold": 2.0871341228485107,
+    "validation_auc": 1.0,
+    "pass_precision": 0.99,
+    "pass_recall": 0.9,
+    "fail_precision": 1.0,
+    "fail_recall": 1.0,
+    "metadata": {
+      "model": "patchcore",
+      "checkpoint": "C:\\Users\\Niteesh S Naik\\OneDrive\\Desktop\\MiniProject\\quality_inspection\\models\\patchcore\\patchcore_checkpoint.pt",
+      "dataset": "autovi",
+      "category": "bracket_assembly",
+      "n_samples": 30
+    }
+  }
+}

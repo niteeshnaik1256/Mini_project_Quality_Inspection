@@ -1,0 +1,30 @@
+# Quality Inspector - Industrial Automotive Visual Quality Inspection
+# Requirements specification for consumer GPU / CPU execution
+
+# Core Deep Learning & Anomaly Detection
+# PyTorch with CUDA recommended for RTX 3050 Laptop GPU (install according to your CUDA runtime):
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+torch>=2.0.0
+torchvision>=0.15.0
+anomalib>=1.0.0
+
+# Scientific computing & Computer Vision
+numpy>=1.24.0,<2.4.0
+scipy>=1.10.0
+opencv-python>=4.8.0
+pillow>=9.5.0
+matplotlib>=3.7.0
+pandas>=2.0.0
+
+# Configuration & Data validation
+pyyaml>=6.0.0
+pydantic>=2.4.0
+
+# Web API & Serving
+fastapi>=0.100.0
+uvicorn>=0.23.0
+
+# Testing & Utilities
+pytest>=7.4.0
+tqdm>=4.65.0
+requests>=2.31.0

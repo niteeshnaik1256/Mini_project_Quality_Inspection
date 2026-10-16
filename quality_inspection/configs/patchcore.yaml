@@ -1,0 +1,37 @@
+# PatchCore Industrial Baseline Configuration
+# Aligned with CVPR 2022 Roth et al. & Anomalib standards
+
+model:
+  name: "patchcore"
+  backbone: "resnet18"                # Lightweight, fast, robust on consumer GPUs & CPU
+  pretrained: true
+  layers:
+    - "layer2"
+    - "layer3"
+  patch_size: 3
+  patch_stride: 1
+  coreset_sampling_ratio: 0.10        # 10% coreset retention for memory efficiency
+  num_neighbors: 9                    # k-NN for anomaly score reweighting
+  dimension_reduction: 128            # Johnson-Lindenstrauss random projection dimension
+
+dataset:
+  name: "autovi"
+  category: "bracket_assembly"
+  root_dir: "data/raw/autovi/bracket_assembly"
+  image_size: [256, 256]
+  train_batch_size: 8
+  eval_batch_size: 8
+  num_workers: 0                      # Safe for Windows multi-processing
+  seed: 42
+  normalization: "imagenet"           # Mean: [0.485, 0.456, 0.406], Std: [0.229, 0.224, 0.225]
+
+trainer:
+  device: "auto"                      # auto: cuda if available, fallback to cpu
+  precision: "fp32"
+  seed: 42
+  output_dir: "models/patchcore"
+  checkpoint_name: "patchcore_checkpoint.pt"
+
+evaluation:
+  gaussian_blur_sigma: 4.0
+  threshold: null                     # Dynamically calibrated in Phase 7

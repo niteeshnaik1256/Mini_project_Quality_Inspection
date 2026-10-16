@@ -1,0 +1,43 @@
+{
+  "generated_at_utc": "2026-10-01T04:23:48.897919+00:00",
+  "models": [
+    {
+      "model": "patchcore",
+      "image_auroc": 1.0,
+      "f1_score": 1.0,
+      "pixel_auroc": 0.9974,
+      "mean_latency_ms": 143.43,
+      "fps": 7.0,
+      "vram_usage_mb": 0.0,
+      "metrics_path": "C:\\Users\\Niteesh S Naik\\OneDrive\\Desktop\\MiniProject\\quality_inspection\\results\\metrics\\patchcore_metrics.json",
+      "missing": false
+    },
+    {
+      "model": "efficientad",
+      "image_auroc": 0.79,
+      "f1_score": 0.8333,
+      "pixel_auroc": 0.9787,
+      "mean_latency_ms": 53.39,
+      "fps": 18.7,
+      "vram_usage_mb": 0.0,
+      "metrics_path": "C:\\Users\\Niteesh S Naik\\OneDrive\\Desktop\\MiniProject\\quality_inspection\\results\\metrics\\efficientad_metrics.json",
+      "missing": false
+    },
+    {
+      "model": "padim",
+      "image_auroc": 1.0,
+      "f1_score": 1.0,
+      "pixel_auroc": 0.9957,
+      "mean_latency_ms": 80.54,
+      "fps": 12.4,
+      "vram_usage_mb": 0.0,
+      "metrics_path": "C:\\Users\\Niteesh S Naik\\OneDrive\\Desktop\\MiniProject\\quality_inspection\\results\\metrics\\padim_metrics.json",
+      "missing": false
+    }
+  ],
+  "context": {
+    "dataset": "AutoVI (automotive visual inspection)",
+    "category": "bracket_assembly",
+    "note": "Values sourced only from existing metrics JSON; missing models are not estimated."
+  }
+}

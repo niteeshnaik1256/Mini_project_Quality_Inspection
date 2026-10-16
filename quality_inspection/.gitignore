@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Data downloads and heavy assets
+quality_inspection/data/download/
+quality_inspection/data/raw/*.zip
+quality_inspection/data/raw/*.tar.gz
+quality_inspection/data/processed/
+
+# Model weights and checkpoints
+quality_inspection/models/**/*.ckpt
+quality_inspection/models/**/*.pt
+quality_inspection/models/**/*.pth
+quality_inspection/models/**/*.onnx
+quality_inspection/models/**/*.bin
+
+# Results and run artifacts (keep structure, ignore large outputs)
+quality_inspection/results/heatmaps/*.png
+quality_inspection/results/visualizations/*.png
+quality_inspection/results/metrics/*.json
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db

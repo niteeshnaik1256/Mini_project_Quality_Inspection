@@ -1,0 +1,4 @@
+model,image_auroc,f1_score,pixel_auroc,mean_latency_ms,fps,vram_usage_mb,metrics_path,missing
+patchcore,1.0,1.0,0.9974,143.43,7.0,0.0,C:\Users\Niteesh S Naik\OneDrive\Desktop\MiniProject\quality_inspection\results\metrics\patchcore_metrics.json,False
+efficientad,0.79,0.8333,0.9787,53.39,18.7,0.0,C:\Users\Niteesh S Naik\OneDrive\Desktop\MiniProject\quality_inspection\results\metrics\efficientad_metrics.json,False
+padim,1.0,1.0,0.9957,80.54,12.4,0.0,C:\Users\Niteesh S Naik\OneDrive\Desktop\MiniProject\quality_inspection\results\metrics\padim_metrics.json,False
